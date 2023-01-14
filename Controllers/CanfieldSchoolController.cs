@@ -36,7 +36,7 @@ namespace CanfieldSchool.Controllers
 
         }
 
-        [HttpPost("StaffById")]
+        [HttpGet("StaffById")]
         public IActionResult GetStaffById(int id)
         {
             var staffsid = _canfieldschoolrepository.GetStaffById(id);
@@ -54,6 +54,13 @@ namespace CanfieldSchool.Controllers
         {
             var teachers = _canfieldschoolrepository.AddTeacher(response);
             return Ok(teachers);
+        }
+
+        [HttpPost("AddStaff")]
+        public IActionResult CreateStaff(CanfiledStaff staffresponse)
+        {
+            var staffs = _canfieldschoolrepository.AddStaff(staffresponse);
+            return Ok(staffs);
         }
 
     }

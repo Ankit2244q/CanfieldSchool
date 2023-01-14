@@ -9,7 +9,6 @@ namespace CanfieldSchool.Models
         public string? Name { get; set; }
         public Guid EmployeeId { get; set; } = new Guid();
         public string? Address { get; set; }
-
         public bool IsOnLeave { get; set; }
     }
 }

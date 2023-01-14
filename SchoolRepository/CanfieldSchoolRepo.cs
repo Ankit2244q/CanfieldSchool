@@ -29,11 +29,20 @@ namespace CanfieldSchool.SchoolRepository
             return canStaff;
         }
 
+        //FOR===STAFFS
+
         public IEnumerable<CanfiledStaff> GetStaffs()
         {
             return _canfieldContext.CanfiledStaffs.ToList();
         }
 
+        //FOR===STUDENTS
+        //public CanfiledStudent AddStudents(CanfiledStudent response)
+        //{
+        //  var addStudent =   _canfieldContext.CanfiledStudents.Add(response);
+        //    _canfieldContext.SaveChanges();
+        //    return response;
+        //}
         public IEnumerable<CanfiledStudent> GetStudents()
         {
             return _canfieldContext.CanfiledStudents.ToList();
@@ -46,7 +55,7 @@ namespace CanfieldSchool.SchoolRepository
         }
 
 
-
+        //FOR===TEACHERS
         public IEnumerable<CanfiledTeacher> GetTeachers()
         {
             return _canfieldContext.CanfiledTeachers.ToList();
@@ -59,13 +68,21 @@ namespace CanfieldSchool.SchoolRepository
             return getTeacherbyid;
         }
 
- //       public CanfiledTeacher AddTeacher(CanfiledTeacher response)
- //       {
- //           //var createTeacher = _canfieldContext.CanfiledTeachers.Add(response);
- //.         return createTeacher;
- //       }
-   
+        public CanfiledTeacher AddTeacher(CanfiledTeacher response)
+        {
+            var createTeacher = _canfieldContext.CanfiledTeachers.Add(response);
+            _canfieldContext.SaveChanges();
+            return response;
+        }
 
+        public CanfiledStaff AddStaff(CanfiledStaff staff)
+        {
+            var createStaff = _canfieldContext.CanfiledStaffs.Add(staff);
+            _canfieldContext.SaveChanges();
+            return staff;
+        }
     }
- }
+}
+
+   
 

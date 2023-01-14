@@ -85,3 +85,4 @@ A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets\msbuild.build.Can
 A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CanfieldSchool.props
 A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CanfieldSchool.props
 A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets.pack.json
+A:\Projects\C#\CanfieldSchool\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
