@@ -86,3 +86,6 @@ A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets\msbuild.buildMult
 A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CanfieldSchool.props
 A:\Projects\C#\CanfieldSchool\obj\Debug\net6.0\staticwebassets.pack.json
 A:\Projects\C#\CanfieldSchool\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+A:\Projects\C#\CanfieldSchool\bin\Debug\net6.0\AutoMapper.dll
+A:\Projects\C#\CanfieldSchool\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+A:\Projects\C#\CanfieldSchool\bin\Debug\net6.0\System.Web.Cors.dll

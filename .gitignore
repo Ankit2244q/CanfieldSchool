@@ -1,2 +1,6 @@
 
 *.vsidx
+.vs/CanfieldSchool/DesignTimeBuild/.dtbcache.v2
+.vs/CanfieldSchool/DesignTimeBuild/.dtbcache.v2
+*.v2
+*.dll

@@ -14,13 +14,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddDbContext<RegisterDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
-
-
 builder.Services.AddTransient<ICanfielSchool, CanfieldSchoolRepo>();
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<ICanfielSchool, CanfieldSchoolRepo>();
 builder.Services.AddTransient<ICanfielSchool, CanfieldSchoolRepo>();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CanfieldDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //    .AddJwtBearer(options =>
 //    {
@@ -34,21 +34,23 @@ builder.Services.AddDbContext<CanfieldDbContext>(options => options.UseSqlServer
 //            ValidAudience = Configuration["Jwt: Audience"],
 //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt: Key"]))
 //        };
-//    });
-
-
+//   });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if(app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    );
 app.UseHttpsRedirection();
 app.UseRouting();
-//app.UseAuthentication();    
+app.UseAuthentication();    
 app.UseAuthorization();
 
 app.MapControllers();
