@@ -77,7 +77,7 @@ namespace CanfieldSchool.SchoolRepository
 
         public CanfiledStaff AddStaff(CanfiledStaff staff)
         {
-            var createStaff = _canfieldContext.CanfiledStaffs.Add(staff);
+              var createStaff = _canfieldContext.CanfiledStaffs.Add(staff);
             _canfieldContext.SaveChanges();
             return staff;
         }

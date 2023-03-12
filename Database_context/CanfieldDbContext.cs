@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using CanfieldSchool.Models;
 using Microsoft.Win32;
+using CanfieldSchool.Login_Register;
 
 namespace CanfieldSchool.Database_context
 {
@@ -44,5 +45,8 @@ namespace CanfieldSchool.Database_context
         public DbSet<CanfiledStudent> CanfiledStudents { get; set; }
 
         public DbSet<CanfiledTeacher> CanfiledTeachers { get; set; }
+
+        public DbSet<UserLogin>  users { get; set; }
     }
 }
+            
