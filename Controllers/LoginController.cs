@@ -93,6 +93,7 @@ namespace CanfieldSchool.Controllers
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
 
                 return Ok(new AuthenticatedResponse { Token = tokenString });
+
             }
 
             return Unauthorized();
